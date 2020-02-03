@@ -18,7 +18,7 @@ module.exports = {
   Query: {
     async getDataDiaria() {
       try {
-        const dataPorDia = await DATOS_DIARIOS.find();
+        const dataPorDia = await DATOS_DIARIOS.find().limit(30);
         return dataPorDia;
       } catch (err) {
         throw new Error(err);
